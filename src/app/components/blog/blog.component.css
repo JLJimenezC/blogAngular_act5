@@ -1,0 +1,36 @@
+.grid{
+    margin-top: 0.625rem;
+    display:grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1,1fr);
+}
+
+@media(min-width: 48rem){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(min-width:62.75rem){
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.sectionform{
+    background-color: whitesmoke;
+    padding: 0.625rem;
+    margin-bottom: 1.875rem;
+}
+.sectionform .form :is(input, textarea){
+    display: block;
+    padding:0.625rem;
+    margin-bottom: 0.625rem;
+    width: 100%;
+}
+.sectionform .form button{
+    padding: 10px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
