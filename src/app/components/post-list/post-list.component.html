@@ -1,0 +1,20 @@
+<div class="grid">
+@for(post of arrPost; track post.id){
+    <article>
+      <figure>
+        <img [src]="post.url" [alt]="post.title" />
+      </figure>
+      <h3>{{ post.title }}</h3>
+      <p>Autor: {{ post.author }}</p>
+      <p>Fecha: {{ post.date | date:'dd/MM/YY'}}</p>
+      <div class="content">
+        <p [innerHTML]="post.body">
+          
+        </p>
+      </div>
+    </article>
+  }@empty{
+    <h2>No hay noticias</h2>
+  }
+
+</div>
