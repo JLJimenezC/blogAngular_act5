@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogComponent } from './components/blog/blog.component';
+import { IPost } from './interfaces/ipost.interfaces';
 
 @Component({
   selector: 'app-root',
