@@ -9,13 +9,11 @@ main {
   padding: 40px;
 }
 
-footer{
+footer {
   padding: 10px;
   background-color: black;
   color: white;
   border-top: 3px solid tomato;
-  position:fixed;
-  bottom: 0px;
   width: 100%;
   text-align: center;
 }
