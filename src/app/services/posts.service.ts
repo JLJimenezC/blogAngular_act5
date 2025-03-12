@@ -31,7 +31,7 @@ export class PostsService {
       body: 'This is the body of the third post.',
     },
   ];
-  id: number = 4;
+  private id: number = 4;
   getAllPosts(): IPost[] {
     return this.arrPost;  
   }

@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { IPost } from '../../interfaces/ipost.interfaces';
 import { PostsService } from '../../services/posts.service';
 import { FormsModule } from '@angular/forms';
+import { toast } from 'ngx-sonner';
 
 @Component({
   selector: 'app-form',
@@ -22,10 +22,11 @@ export class FormComponent {
     ) {
       //Llevar el newPost al servicio, para ello tenemos que inyectar el servicio dentro de este componente
       let response = this.postsService.insert(form.value);
-      alert(response);
+      toast.success(response);
+      
       form.reset();
     } else {
-      alert('Faltan campos por llenar');
+      toast.error('Faltan campos por llenar');
     }
   }
 }

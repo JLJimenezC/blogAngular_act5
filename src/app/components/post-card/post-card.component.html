@@ -1,1 +1,13 @@
-<p>post-card works!</p>
+<article>
+    <figure>
+      <img [src]="miPost.url" [alt]="miPost.title" />
+    </figure>
+    <h3>{{ miPost.title }}</h3>
+    <p>Autor: {{ miPost.author }}</p>
+    <p>Fecha: {{ miPost.date | date:'dd/MM/YY'}}</p>
+    <div class="content">
+      <p [innerHTML]="miPost.body">
+        
+      </p>
+    </div>
+  </article>
